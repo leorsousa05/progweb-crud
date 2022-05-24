@@ -27,12 +27,15 @@
 
     <?php foreach($listaDeProdutos as $produto) { ?>
     <ul>
-        <li><b>Nome:  </b> <?=$produto["produto"] ?>  </li>
+        <li><b>Nome:  </b> <?=$produto["nome"] ?>  </li>
         <li><b>Preço:  </b> <?='R$ '.$produto["preco"] ?>  </li>
         <li><b>Quantidade:  </b> <?=$produto["quantidade"] ?>  </li>
         <li><b>Descrição:  </b> <?=$produto["descricao"] ?>  </li>
-        <li><b>Fabricante:  </b> <?=$produto["fabricantes_id"] ?> </li>
+        <li><b>Fabricante:  </b> <?=$produto["fabricante"] ?> </li>
     </ul>
+    <a href="atualizar.php?id=<?=$produto['id']?>">Atualização</a>
+    <a href="excluir.php?id=<?=$produto['id']?>">Excluir</a>
+
     <?php } ?>
 
 </div>
